@@ -18,6 +18,7 @@
 		7B81A50D2395F610000329D1 /* DatabaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B81A50C2395F610000329D1 /* DatabaseController.swift */; };
 		7B81A50F2395FD6A000329D1 /* LocationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B81A50E2395FD6A000329D1 /* LocationController.swift */; };
 		7B81A511239708FD000329D1 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B81A510239708FD000329D1 /* MapViewController.swift */; };
+		7B81A51D2399C88A000329D1 /* FreeCarSpots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B81A51C2399C88A000329D1 /* FreeCarSpots.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		7B81A50C2395F610000329D1 /* DatabaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DatabaseController.swift; path = "/Users/cavancook/Desktop/cs402/Cook-2019-Fall-iOS/FinalProject/ParkItBoi/ParkItBoi/DatabaseController.swift"; sourceTree = "<absolute>"; };
 		7B81A50E2395FD6A000329D1 /* LocationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationController.swift; sourceTree = "<group>"; };
 		7B81A510239708FD000329D1 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		7B81A51C2399C88A000329D1 /* FreeCarSpots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeCarSpots.swift; sourceTree = "<group>"; };
 		EAAFE523618C144D13446B4A /* Pods-ParkItBoi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParkItBoi.debug.xcconfig"; path = "Target Support Files/Pods-ParkItBoi/Pods-ParkItBoi.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -91,6 +93,7 @@
 				7B81A4FE2395F4DD000329D1 /* ParkItBoi.xcdatamodeld */,
 				7B81A50E2395FD6A000329D1 /* LocationController.swift */,
 				7B81A510239708FD000329D1 /* MapViewController.swift */,
+				7B81A51C2399C88A000329D1 /* FreeCarSpots.swift */,
 			);
 			path = ParkItBoi;
 			sourceTree = "<group>";
@@ -206,6 +209,7 @@
 				7B81A4F62395F4DD000329D1 /* AppDelegate.swift in Sources */,
 				7B81A4F82395F4DD000329D1 /* SceneDelegate.swift in Sources */,
 				7B81A5002395F4DD000329D1 /* ParkItBoi.xcdatamodeld in Sources */,
+				7B81A51D2399C88A000329D1 /* FreeCarSpots.swift in Sources */,
 				7B81A511239708FD000329D1 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
