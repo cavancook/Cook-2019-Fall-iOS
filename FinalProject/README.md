@@ -10,7 +10,7 @@
 
 ## Features and usage
 
-    Segues lead to MapKit with specified image annotations. When location is clicked on gives more information, as well as if you click on the side button it will open maps and give directions to location. Close button in bottom left corner. Change map type segmented control in bottom right.
+    Segues lead to MapKit with specified image annotations. When location is clicked on gives more information, as well as if you click on the side button it will open maps and give directions to location. Close button in bottom left corner. Change map type segmented control in bottom right. Each button selects just the spots you are looking for, making the view cleaner and faster to use.
 
 ## Testing
 
