@@ -13,15 +13,18 @@ class MapViewController: UIViewController {
 
     @IBOutlet weak var mapView: MKMapView!
     
+    var choice: String = "Cars"
+    
     @IBAction func changeMapType(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
             mapView.mapType = .standard
-        } else {
+        } else if(sender.selectedSegmentIndex == 1){
             mapView.mapType = .satellite
+        } else {
+            mapView.mapType = .hybrid
         }
-        
     }
-    
+
     
     @IBAction func close(_ sender: Any) {
         dismiss(animated: true, completion: nil)
@@ -38,18 +41,16 @@ class MapViewController: UIViewController {
         mapView.setRegion(region, animated: true)
         mapView.delegate = self
         
-        // show spot on map
-        let freeCarSpots = FreeCarSpots(title: "13th and Jefferson",
-          locationName: "13th and Jefferson",
-          discipline: "Free Street Parking",
-          coordinate: CLLocationCoordinate2D(latitude: 43.620433, longitude: -116.206396))
-        mapView.addAnnotation(freeCarSpots)
-        
-        let freeCarSpots2 = FreeCarSpots(title: "Post Office",
-          locationName: "Post Office",
-          discipline: "Free Street Parking",
-          coordinate: CLLocationCoordinate2D(latitude: 43.614677, longitude: -116.215851))
-        mapView.addAnnotation(freeCarSpots2)
+        // show spots on map
+        if (choice == "Motorcycles") {
+            postMotoPins()
+        } else if (choice == "Bikes"){
+            postBikePins()
+        } else if(choice == "Cars") {
+        postCarPins()
+        }
+        mapView.register(FreeCarSpotsImageView.self,
+        forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
 
     }
 }
@@ -58,25 +59,41 @@ extension MapViewController: MKMapViewDelegate {
        print("rendering ...")
     }
     
-    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-      // 2
-      guard let annotation = annotation as? FreeCarSpots else { return nil }
-      // 3
-      let identifier = "marker"
-      var view: MKMarkerAnnotationView
-      // 4
-      if let dequeuedView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
-        as? MKMarkerAnnotationView {
-        dequeuedView.annotation = annotation
-        view = dequeuedView
-      } else {
-        // 5
-        view = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: identifier)
-        view.canShowCallout = true
-        view.calloutOffset = CGPoint(x: -5, y: 5)
-        view.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
-      }
-      return view
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView,
+        calloutAccessoryControlTapped control: UIControl) {
+      let location = view.annotation as! FreeCarSpots
+      let launchOptions = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving]
+      location.mapItem().openInMaps(launchOptions: launchOptions)
+    }
+
+    
+    func postCarPins(){
+        createPin(title: "Free Street Parking", name: "Jefferson and 13th", type: "Car", locationLat: 43.620433, locationLong: -116.206396)
+        createPin(title: "Free Street Parking", name: "Jefferson and 13th", type: "Car", locationLat: 43.614677, locationLong: -116.215851)
+        createPin(title: "Free Park Parking", name: "Ann Morrison", type: "Car", locationLat: 43.606720, locationLong: -116.215627)
+        createPin(title: "Free 2hr Street Parking", name: "Cradle Point", type: "Car", locationLat: 43.619957, locationLong: -116.205462)
+        createPin(title: "Free Street Parking", name: "Insurance garage side", type: "Car", locationLat: 43.620836, locationLong: -116.205612)
+        createPin(title: "Free 2hr Street Parking", name: "Library!", type: "Car", locationLat: 43.610802, locationLong: -116.208010)
+        createPin(title: "Free Street Parking", name: "Library!", type: "Car", locationLat: 43.610823, locationLong: -116.208231)
+        createPin(title: "Free 2hr Street Parking", name: "Library!", type: "Car", locationLat: 43.610409, locationLong: -116.208613)
+        createPin(title: "Free Street Parking", name: "Library!", type: "Car", locationLat: 43.610528, locationLong: -116.208279)
+    }
+    func postMotoPins(){
+        createPin(title: "Free Motorcycle Parking", name: "Guru Donuts", type: "Motorcycle", locationLat: 43.616900, locationLong: -116.205707)
+        createPin(title: "Free Motorcycle Parking", name: "Guru Donuts", type: "Motorcycle", locationLat: 43.616900, locationLong: -116.205707)
+    }
+    func postBikePins(){
+        createPin(title: "Free Bike Parking", name: "Bus Station Hoops", type: "Bike", locationLat: 43.615212, locationLong: -116.202796)
+        createPin(title: "Free Bike Parking", name: "8th Street Hoops", type: "Bike", locationLat: 43.616618, locationLong: -116.202633)
+    }
+    
+    //Function to simplify creating pins
+    func createPin(title: String, name: String, type: String, locationLat: Double, locationLong: Double){
+        let pin = FreeCarSpots(title: title,
+            locationName: name,
+            discipline: type,
+            coordinate: CLLocationCoordinate2D(latitude: locationLat, longitude: locationLong))
+        mapView.addAnnotation(pin)
     }
 }
 

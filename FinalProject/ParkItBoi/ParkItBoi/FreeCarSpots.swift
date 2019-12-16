@@ -8,6 +8,7 @@
 
 import Foundation
 import MapKit
+import Contacts
 
 class FreeCarSpots: NSObject, MKAnnotation {
   let title: String?
@@ -27,4 +28,32 @@ class FreeCarSpots: NSObject, MKAnnotation {
   var subtitle: String? {
     return locationName
   }
+    // Annotation right callout accessory opens this mapItem in Maps app
+    func mapItem() -> MKMapItem {
+      let addressDict = [CNPostalAddressStreetKey: subtitle!]
+      let placemark = MKPlacemark(coordinate: coordinate, addressDictionary: addressDict)
+      let mapItem = MKMapItem(placemark: placemark)
+      mapItem.name = title
+      return mapItem
+    }
+
+    var markerTintColor: UIColor  {
+      switch discipline {
+      case "Car":
+        return .red
+      case "Motorcycle":
+        return .cyan
+      case "Bike":
+        return .blue
+      default:
+        return .green
+      }
+    }
+    var imageName: String? {
+        if discipline == "Motorcycle" { return "Motorcycle" }
+        if discipline == "Bike" { return "Bike" }
+        return "Car"
+    }
 }
+
+

@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Toe-dA-rgM">
-                                <rect key="frame" x="89" y="315" width="237" height="76"/>
+                                <rect key="frame" x="89" y="410" width="237" height="76"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="26"/>
                                 <state key="normal" title="Free Car Spots">
@@ -27,6 +27,36 @@
                                     <segue destination="TsO-Ud-DiT" kind="modal" identifier="mapSegue" id="EW5-K4-Nl9"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Splash" translatesAutoresizingMaskIntoConstraints="NO" id="HRL-af-aqo">
+                                <rect key="frame" x="86" y="169" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OzU-aC-8ci">
+                                <rect key="frame" x="82" y="642" width="248" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="26"/>
+                                <state key="normal" title="Free Bike Parking">
+                                    <color key="titleColor" red="0.14901960784313725" green="0.13333333333333333" blue="0.11372549019607843" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.27843137254901962" green="0.3411764705882353" blue="0.34901960784313724" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="BikeSegue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E5e-6g-q2I"/>
+                                    <segue destination="TsO-Ud-DiT" kind="show" id="Xx6-mx-1Pb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zGR-bS-xH3">
+                                <rect key="frame" x="53" y="533" width="308" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="26"/>
+                                <state key="normal" title="Free Motorcycle Spots">
+                                    <color key="titleColor" red="0.20061829689999999" green="0.1767892838" blue="0.15151888129999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.27804394948082189" green="0.33935430356438356" blue="0.34550452717534241" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="MotoSegue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="u17-6T-oBt"/>
+                                    <segue destination="TsO-Ud-DiT" kind="show" id="8jL-YK-YOV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.65098039215686276" green="0.60784313725490191" blue="0.5725490196078431" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -35,28 +65,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="285.50724637681162" y="79.017857142857139"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="1V8-VP-srR">
-            <objects>
-                <viewController id="d8g-cD-FIx" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="vmK-Du-9aq">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QXF-xp-XYB">
-                                <rect key="frame" x="87" y="65" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="aU2-8t-UID"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="TOd-eQ-Zqm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1013" y="80"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="lGu-Ix-czM">
@@ -70,10 +78,11 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                             </mapView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="gyH-9T-lRu">
-                                <rect key="frame" x="243" y="791" width="151" height="32"/>
+                                <rect key="frame" x="167" y="791" width="227" height="32"/>
                                 <segments>
                                     <segment title="Standard"/>
                                     <segment title="Satellite"/>
+                                    <segment title="Hybrid"/>
                                 </segments>
                                 <connections>
                                     <action selector="changeMapType:" destination="TsO-Ud-DiT" eventType="valueChanged" id="XAI-m8-jnX"/>
@@ -104,6 +113,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6rU-lJ-IpX"/>
                     </view>
+                    <navigationItem key="navigationItem" id="jYD-HE-b3w"/>
                     <connections>
                         <outlet property="mapView" destination="CsK-cE-POB" id="ehB-wt-LlM"/>
                     </connections>
@@ -113,4 +123,10 @@
             <point key="canvasLocation" x="-530.43478260869574" y="79.6875"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Splash" width="264" height="264"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="8jL-YK-YOV"/>
+    </inferredMetricsTieBreakers>
 </document>

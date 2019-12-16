@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		09BC9309CE95DE54925A1560 /* Pods_ParkItBoi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EC9DD93785AF50F6E7CFC10 /* Pods_ParkItBoi.framework */; };
+		7B0D9B6A23A076C70038D12B /* FreeCarSpotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0D9B6923A076C70038D12B /* FreeCarSpotView.swift */; };
 		7B81A4F62395F4DD000329D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B81A4F52395F4DD000329D1 /* AppDelegate.swift */; };
 		7B81A4F82395F4DD000329D1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B81A4F72395F4DD000329D1 /* SceneDelegate.swift */; };
 		7B81A4FA2395F4DD000329D1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B81A4F92395F4DD000329D1 /* ViewController.swift */; };
@@ -24,6 +25,7 @@
 /* Begin PBXFileReference section */
 		1D07380835641D26FCBA9AB3 /* Pods-ParkItBoi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParkItBoi.release.xcconfig"; path = "Target Support Files/Pods-ParkItBoi/Pods-ParkItBoi.release.xcconfig"; sourceTree = "<group>"; };
 		3EC9DD93785AF50F6E7CFC10 /* Pods_ParkItBoi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ParkItBoi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B0D9B6923A076C70038D12B /* FreeCarSpotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeCarSpotView.swift; sourceTree = "<group>"; };
 		7B81A4F22395F4DD000329D1 /* ParkItBoi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParkItBoi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B81A4F52395F4DD000329D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B81A4F72395F4DD000329D1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				7B81A50E2395FD6A000329D1 /* LocationController.swift */,
 				7B81A510239708FD000329D1 /* MapViewController.swift */,
 				7B81A51C2399C88A000329D1 /* FreeCarSpots.swift */,
+				7B0D9B6923A076C70038D12B /* FreeCarSpotView.swift */,
 			);
 			path = ParkItBoi;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 				7B81A50F2395FD6A000329D1 /* LocationController.swift in Sources */,
 				7B81A4F62395F4DD000329D1 /* AppDelegate.swift in Sources */,
 				7B81A4F82395F4DD000329D1 /* SceneDelegate.swift in Sources */,
+				7B0D9B6A23A076C70038D12B /* FreeCarSpotView.swift in Sources */,
 				7B81A5002395F4DD000329D1 /* ParkItBoi.xcdatamodeld in Sources */,
 				7B81A51D2399C88A000329D1 /* FreeCarSpots.swift in Sources */,
 				7B81A511239708FD000329D1 /* MapViewController.swift in Sources */,

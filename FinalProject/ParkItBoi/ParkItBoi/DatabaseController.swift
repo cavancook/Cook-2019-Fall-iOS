@@ -41,7 +41,11 @@ class DatabaseController: NSObject {
             }
                 return persistentContainer!
         }
-           
+    
+            // MARK: - Core Data seed
+    static func seedData(){
+        
+    }
 
            // MARK: - Core Data Saving support
 
