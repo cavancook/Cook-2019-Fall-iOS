@@ -17,6 +17,9 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    @IBAction func CarSegue(_ sender: UIButton) {
+        buttonChoice = "Cars"
+    }
     @IBAction func MotoSegue(_ sender: UIButton) {
         buttonChoice = "Motorcycles"
     }

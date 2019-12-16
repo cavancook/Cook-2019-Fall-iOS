@@ -24,7 +24,8 @@
                                     <color key="titleShadowColor" red="0.27843137254901962" green="0.3411764705882353" blue="0.34901960784313724" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="TsO-Ud-DiT" kind="modal" identifier="mapSegue" id="EW5-K4-Nl9"/>
+                                    <action selector="CarSegue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c1o-e7-XHu"/>
+                                    <segue destination="TsO-Ud-DiT" kind="show" id="nZC-Ru-8Gs"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Splash" translatesAutoresizingMaskIntoConstraints="NO" id="HRL-af-aqo">
